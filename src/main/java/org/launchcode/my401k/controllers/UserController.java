@@ -10,7 +10,7 @@ public class UserController {
     @RequestMapping(value = "")
     @ResponseBody
     public String index() {
-        return "my401k (Hello, world!)";
+        return "Hello, world!";
     }
 
 }
