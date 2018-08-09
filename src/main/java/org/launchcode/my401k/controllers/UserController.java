@@ -1,16 +1,17 @@
 package org.launchcode.my401k.controllers;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
+@RequestMapping("user")
 public class UserController {
 
     @RequestMapping(value = "")
-    @ResponseBody
-    public String index() {
-        return "my401k (Hello, world!)  Liftoff mentor Dave is awesome!";
+    public String index(Model model) {
+        model.addAttribute("title", "My 401k");
+        return "user/index";
     }
 
 }
