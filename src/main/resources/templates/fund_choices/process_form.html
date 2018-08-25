@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+
+<head th:replace="fragments :: head"></head>
+
+<body class="container">
+
+<h1 th:text="${title}">Default Title</h1>
+
+<form method="post">
+
+    <div class="form-group">
+        <label th:for="investment-choices"><h3>Asset Allocation:</h3></label>
+        <tr>
+            <th:block th:each="item : ${assetAllocation}">
+                <td><input type="checkbox" th:text="${assetAllocation}">${assetAllocation}</td>
+            </th:block>
+        </tr>
+    </div>
+
+    <div class="form-group">
+        <label th:for="investment-choices"><h3>Bonds:</h3></label>
+        <tr>
+            <th:block th:each="item : ${bonds}">
+                <td><input type="checkbox" th:text="${bonds}">${bonds}</td>
+            </th:block>
+        </tr>
+    </div>
+
+    <div class="form-group">
+        <label th:for="investment-choices"><h3>Global:</h3></label>
+        <tr>
+            <th:block th:each="item : ${global}">
+                <td><input type="checkbox" th:text="${global}">${global}</td>
+            </th:block>
+        </tr>
+    </div>
+
+    <div class="form-group">
+        <label th:for="investment-choices"><h3>Large Cap:</h3></label>
+        <tr>
+            <th:block th:each="item : ${largeCap}">
+                <td><input type="checkbox" th:text="${largecap}">${largeCap}</td>
+            </th:block>
+        </tr>
+    </div>
+
+    <div class="form-group">
+        <label th:for="investment-choices"><h3>Mid Cap:</h3></label>
+        <tr>
+            <th:block th:each="item : ${midCap}">
+                <td><input type="checkbox" th:text="${midCap}">${midCap}</td>
+            </th:block>
+        </tr>
+    </div>
+
+    <div class="form-group">
+        <label th:for="investment-choices"><h3>Asset Allocation:</h3></label>
+        <tr>
+            <th:block th:each="item : ${smallCap}">
+                <td><input type="checkbox" th:text="${smallCap}">${smallCap}</td>
+            </th:block>
+        </tr>
+    </div>
+
+    <div class="form-group">
+        <label th:for="investment-choices"><h3>Specialty:</h3></label>
+        <tr>
+            <th:block th:each="item : ${specialty}">
+                <td><input type="checkbox" th:text="${specialty}">${specialty}</td>
+            </th:block>
+        </tr>
+    </div>
+
+    <div class="form-group">
+        <label th:for="investment-choices"><h3>Stable Value:</h3></label>
+        <tr>
+            <th:block th:each="item : ${stableValue}">
+                <td><input type="checkbox" th:text="${stableValue}">${stableValue}</td>
+            </th:block>
+        </tr>
+    </div>
+
+    <br />
+
+    <input type="submit" value="Submit" />
+
+    <br />
+
+</form>
+
+<a href="/logout">Logout</a>
+
+</body>
+
+</html>

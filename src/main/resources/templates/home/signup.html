@@ -7,7 +7,7 @@
 
     <h1 th:text="${title}">Default Title</h1>
 
-    <form method="post" style="max-width:600px;" th:object="${login}">
+    <form method="post" style="max-width:500px;" th:object="${signup}">
 
         <div class="form-group">
             <label th:for="username">Username:</label>
@@ -25,7 +25,15 @@
             <span th:errors="*{password}" class="error"></span>
         </div>
 
-        <input type="submit" value="Login" />
+        <div class="form-group">
+            <label th:for="verify-password">Verify Password:</label>
+
+            <input class="form-control" th:field="*{verify-password}" />
+
+            <span th:error="*{verify-password}" class="error"></span>
+        </div>
+
+        <input type="submit" value="Sign Up" />
 
     </form>
 
