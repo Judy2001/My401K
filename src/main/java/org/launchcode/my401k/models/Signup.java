@@ -8,34 +8,36 @@ import javax.validation.constraints.Size;
 public class Signup {
 
     @Id
-    @Column(name="id")
     @GeneratedValue
-    private Integer id;
+    private int userId;
 
-    @Column
     @NotNull
-    @Size(min=3, max=30, message = "Username must be at least 3 characters long and not more than 30")
+    @Size(min=3, max=30, message = "Username must be 3-20 characters long")
     private String username;
 
-    @Column
     @NotNull
-    @Size(min=3, max=20, message = "Password must be at least 3 characters long and not more than 20")
+    @Size(min=3, max=20, message = "Password must be 3-20 characters long")
     private String password;
 
     @NotNull
-    @Size(min=3, max=20, message = "This must match your password")
+    @Size(min=3, max=20, message = "Passwords must match")
     private String verify_password;
 
 
-    public Signup(String username, int id, String password, String verify_password) {
+    public Signup(String username, int userId, String password, String verify_password) {
         this.username = username;
         this.password = password;
     }
 
     public Signup() { }
 
-    public Integer getId() {
-        return id;
+
+    public void setSignup(Signup signup) {
+    }
+
+
+    public int getUserId() {
+        return userId;
     }
 
     public String getUsername() {

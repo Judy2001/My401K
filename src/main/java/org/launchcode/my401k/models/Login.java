@@ -1,37 +1,26 @@
 package org.launchcode.my401k.models;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-@Entity
-public class Login {
 
-    @Id
-    private Integer id;
+public class Login extends Signup {
 
     @NotNull
-    @Size(min=3, max=30, message = "Username must be at least 3 characters long and not more than 30")
+    @Size(min=3, max=30, message = "Username not in database")
     private String username;
 
     @NotNull
-    @Size(min=3, max=20, message = "Password must be at least 3 characters long and not more than 20")
+    @Size(min=3, max=20, message = "Password incorrect")
     private String password;
 
-
-    public Login(String username, int id, String password) {
+    public Login(String username, String password) {
         this.username = username;
         this.password = password;
     }
 
     public Login() { }
-
-    public Integer getId() {
-        return id;
-    }
 
     public String getUsername() {
         return username;
@@ -48,5 +37,4 @@ public class Login {
     public void setPassword(String password) {
         this.password = password;
     }
-
 }

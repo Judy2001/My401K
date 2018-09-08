@@ -1,31 +1,79 @@
 package org.launchcode.my401k.models.forms;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.util.ArrayList;
 
 @Entity
 public class InvestmentChoices {
 
-    private Integer assetAllocationPct;
+    @Id
+    private int userId;
 
-    private Integer bondsPct;
+    private ArrayList assetAllocation;
+    private ArrayList bonds;
+    private ArrayList global;
+    private ArrayList largeCap;
+    private ArrayList midCap;
+    private ArrayList smallCap;
+    private ArrayList specialty;
+    private ArrayList stableValue;
+    private ArrayList choices;
 
-    private Integer globalPct;
+    private int assetAllocationPercent;
+    private int bondsPercent;
+    private int globalPerecent;
+    private int largeCapPercent;
+    private int midCapPercent;
+    private int smallCapPercent;
+    private int specialtyPercent;
+    private int stableValuePercent;
+    private int totalPercent;
 
-    private Integer largeCapPct;
+    public InvestmentChoices(ArrayList assetAllocation, ArrayList bonds, ArrayList global,
+                             ArrayList largeCap, ArrayList midCap, ArrayList smallCap,
+                             ArrayList specialty, ArrayList stableValue) {
 
-    private Integer midCapPct;
+        this.assetAllocation = assetAllocation;
+        this.bonds = bonds;
+        this.global = global;
+        this.largeCap = largeCap;
+        this.midCap = midCap;
+        this.smallCap = smallCap;
+        this.specialty = specialty;
+        this.stableValue = stableValue;
+    }
 
-    private Integer smallCapPct;
+    public ArrayList getAssetAllocation() {
+        return assetAllocation;
+    }
 
-    private Integer specialtyPct;
+    public ArrayList getBonds() {
+        return bonds;
+    }
 
-    private Integer stableValuePct;
+    public ArrayList getGlobal() {
+        return global;
+    }
 
-    public InvestmentChoicesForm(assetAllocationPct, bondsPct, globalPct, largeCapPct, midCapPct; smallCapPct,
-                                 specialtyPct, stableValuePct) {
+    public ArrayList getLargeCap() {
+        return largeCap;
+    }
 
+    public ArrayList getMidCap() {
+        return midCap;
+    }
 
+    public ArrayList getSmallCap() {
+        return smallCap;
+    }
 
+    public ArrayList getSpecialty() {
+        return specialty;
+    }
+
+    public ArrayList getStableValue() {
+        return stableValue;
     }
 
 }
