@@ -1,14 +1,14 @@
 package org.launchcode.my401k.models;
 
+import org.launchcode.my401k.models.forms.User;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-@Entity
+
 public class Signup {
 
-    @Id
-    @GeneratedValue
     private int userId;
 
     @NotNull
@@ -19,25 +19,30 @@ public class Signup {
     @Size(min=3, max=20, message = "Password must be 3-20 characters long")
     private String password;
 
+    @Transient
     @NotNull
     @Size(min=3, max=20, message = "Passwords must match")
     private String verify_password;
 
 
-    public Signup(String username, int userId, String password, String verify_password) {
+    public Signup(String username, String password, String verify_password) {
         this.username = username;
         this.password = password;
+        this.verify_password = verify_password;
     }
 
     public Signup() { }
 
 
-    public void setSignup(Signup signup) {
+    public void setSignup(Signup newSignup) {
     }
 
+    public User createUser(){
+        User newUser = new User();
+        newUser.setUsername(this.username);
+        newUser.setPassword(this.password);
 
-    public int getUserId() {
-        return userId;
+        return (newUser);
     }
 
     public String getUsername() {

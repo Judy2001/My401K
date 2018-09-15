@@ -1,40 +1,42 @@
-package org.launchcode.my401k.models;
+package org.launchcode.my401k.models.forms;
 
-
-import org.launchcode.my401k.models.forms.User;
-
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 
+@Entity
+public class User {
 
-public class Login extends User {
+    @Id
+    @GeneratedValue
+    private int userId;
 
     @NotNull
-    @Size(min=3, max=30, message = "Username not in database")
     private String username;
 
     @NotNull
-    @Size(min=3, max=20, message = "Password incorrect")
     private String password;
 
 
-    public Login(String username, String password) {
+    public User(int userId, String username, String password) {
+        this.userId = userId;
         this.username = username;
         this.password = password;
     }
 
 
-    public Login() { }
+    public User() { }
 
 
-    public User loginUser(){
-        User user = new User();
-        user.setUsername(this.username);
-        user.setPassword(this.password);
 
-        return (user);
+    public void setUser(User newUser) {
     }
 
+
+    public int getUserId() {
+        return userId;
+    }
 
     public String getUsername() {
         return username;
@@ -51,4 +53,5 @@ public class Login extends User {
     public void setPassword(String password) {
         this.password = password;
     }
+
 }

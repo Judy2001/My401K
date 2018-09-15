@@ -4,6 +4,7 @@ package org.launchcode.my401k.controllers;
 import org.launchcode.my401k.models.Login;
 import org.launchcode.my401k.models.Signup;
 import org.launchcode.my401k.models.data.UserDao;
+import org.launchcode.my401k.models.forms.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -33,24 +34,25 @@ public class UserController {
 
     @RequestMapping(value = "signup", method = RequestMethod.GET)
     public String displaySignupForm(Model model) {
+
         model.addAttribute("title", "My 401k");
-        model.addAttribute("userIds", userDao.findAll());
+        model.addAttribute("userId", userDao.findAll());
         model.addAttribute(new Signup());
+
         return "user/signup";
     }
 
     @RequestMapping(value = "signup", method = RequestMethod.POST)
     public String processSignupForm(@ModelAttribute @Valid Signup newSignup,
-                                    Errors errors, @RequestParam int userId, Model model) {
+                                    Errors errors, Model model) {
 
         if (errors.hasErrors()) {
             model.addAttribute("title", "My 401k");
             return "user/signup";
         }
 
-        Signup newUser = userDao.findOne(userId);
-        newSignup.setSignup(newUser);
-        userDao.save(newSignup);
+        User newUser = newSignup.createUser();
+        userDao.save(newUser);
         return "redirect:/investment_choices/display_form";
 
     }
@@ -65,14 +67,17 @@ public class UserController {
     }
 
     @RequestMapping(value = "login", method = RequestMethod.POST)
-    public String processLoginForm(@ModelAttribute @Valid Login login, Errors errors,
-                                   @RequestParam int userId, Model model) {
+    public String processLoginForm(@ModelAttribute @Valid Login newLogin, Errors errors,
+                                   Model model) {
 
         if (errors.hasErrors()) {
             model.addAttribute("title", "My 401k");
-            model.addAttribute("userId", userDao.findAll());
+            //model.addAttribute("userId", userDao.findAll());
+            User user = newLogin.loginUser();
+            userDao.save(user);
             return "user/login";
         }
+
         return "redirect:/investment_choices/display_form";
     }
 

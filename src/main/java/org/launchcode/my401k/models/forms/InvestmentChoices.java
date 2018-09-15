@@ -1,14 +1,11 @@
 package org.launchcode.my401k.models.forms;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+//import org.launchcode.my401k.models.UserChoices;
+
 import java.util.ArrayList;
 
-@Entity
 public class InvestmentChoices {
 
-    @Id
-    private int userId;
 
     private ArrayList assetAllocation;
     private ArrayList bonds;
@@ -18,17 +15,7 @@ public class InvestmentChoices {
     private ArrayList smallCap;
     private ArrayList specialty;
     private ArrayList stableValue;
-    private ArrayList choices;
 
-    private int assetAllocationPercent;
-    private int bondsPercent;
-    private int globalPerecent;
-    private int largeCapPercent;
-    private int midCapPercent;
-    private int smallCapPercent;
-    private int specialtyPercent;
-    private int stableValuePercent;
-    private int totalPercent;
 
     public InvestmentChoices(ArrayList assetAllocation, ArrayList bonds, ArrayList global,
                              ArrayList largeCap, ArrayList midCap, ArrayList smallCap,
@@ -43,6 +30,14 @@ public class InvestmentChoices {
         this.specialty = specialty;
         this.stableValue = stableValue;
     }
+
+
+    public InvestmentChoices() { }
+
+
+    public void setInvestmentChoices(InvestmentChoices investmentChoices) {
+    }
+
 
     public ArrayList getAssetAllocation() {
         return assetAllocation;

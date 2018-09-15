@@ -12,15 +12,15 @@ import java.util.ArrayList;
 @RequestMapping(value = "investment_choices")
 public class InvestmentChoicesController {
 
-    static ArrayList<String> assetAllocation = new ArrayList<String>();
-    static ArrayList<String> bonds = new ArrayList<String>();
-    static ArrayList<String> global = new ArrayList<String>();
-    static ArrayList<String> largeCap = new ArrayList<String>();
-    static ArrayList<String> midCap = new ArrayList<String>();
-    static ArrayList<String> smallCap = new ArrayList<String>();
-    static ArrayList<String> specialty = new ArrayList<String>();
-    static ArrayList<String> stableValue = new ArrayList<String>();
-    static ArrayList<String> choices = new ArrayList<String>();
+    static ArrayList<String> assetAllocation = new ArrayList<>();
+    static ArrayList<String> bonds = new ArrayList<>();
+    static ArrayList<String> global = new ArrayList<>();
+    static ArrayList<String> largeCap = new ArrayList<>();
+    static ArrayList<String> midCap = new ArrayList<>();
+    static ArrayList<String> smallCap = new ArrayList<>();
+    static ArrayList<String> specialty = new ArrayList<>();
+    static ArrayList<String> stableValue = new ArrayList<>();
+    static ArrayList<String> choices = new ArrayList<>();
 
 
     @RequestMapping(value = "display_form", method = RequestMethod.GET)
