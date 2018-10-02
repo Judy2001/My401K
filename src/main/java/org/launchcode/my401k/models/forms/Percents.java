@@ -2,7 +2,7 @@ package org.launchcode.my401k.models.forms;
 
 
 
-public class InvestmentPercents {
+public class Percents {
 
     private int assetAllocationPercent;
     private int bondsPercent;
@@ -15,10 +15,10 @@ public class InvestmentPercents {
     private int totalPercent;
 
 
-    public InvestmentPercents (int assetAllocationPercent, int bondsPercent,
-                               int globalPercent, int largeCapPercent, int midCapPercent,
-                               int smallCapPercent, int specialtyPercent,
-                               int stableValuePercent, int totalPercent) {
+    public Percents(int assetAllocationPercent, int bondsPercent,
+                    int globalPercent, int largeCapPercent, int midCapPercent,
+                    int smallCapPercent, int specialtyPercent,
+                    int stableValuePercent, int totalPercent) {
 
         this.assetAllocationPercent = assetAllocationPercent;
         this.bondsPercent = bondsPercent;
@@ -33,84 +33,84 @@ public class InvestmentPercents {
     }
 
 
-    public InvestmentPercents() { }
+    public Percents() { }
 
 
-    public InvestmentPercents createAssetAllocationPercent(InvestmentPercents assetAllocationPercent) {
+    public Percents createAssetAllocationPercent(Percents assetAllocationPercent) {
 
-            InvestmentPercents newAssetAllocationPercent = new InvestmentPercents();
+            Percents newAssetAllocationPercent = new Percents();
 
             return (assetAllocationPercent);
 
         }
 
 
-    public InvestmentPercents createBondsPercent(InvestmentPercents bondsPercent) {
+    public Percents createBondsPercent(Percents bondsPercent) {
 
-        InvestmentPercents newBondsPercent = new InvestmentPercents();
+        Percents newBondsPercent = new Percents();
 
         return (bondsPercent);
 
     }
 
 
-    public InvestmentPercents createGlobalPercent(InvestmentPercents globalPercent) {
+    public Percents createGlobalPercent(Percents globalPercent) {
 
-        InvestmentPercents newGlobalPercent = new InvestmentPercents();
+        Percents newGlobalPercent = new Percents();
 
         return (globalPercent);
 
     }
 
 
-    public InvestmentPercents createLargeCapPercent(InvestmentPercents largeCapPercent) {
+    public Percents createLargeCapPercent(Percents largeCapPercent) {
 
-        InvestmentPercents newLargeCapPercent = new InvestmentPercents();
+        Percents newLargeCapPercent = new Percents();
 
         return (largeCapPercent);
 
     }
 
 
-    public InvestmentPercents createMidCapPercent(InvestmentPercents midCapPercent) {
+    public Percents createMidCapPercent(Percents midCapPercent) {
 
-        InvestmentPercents newMidCapPercent = new InvestmentPercents();
+        Percents newMidCapPercent = new Percents();
 
         return (midCapPercent);
 
     }
 
 
-    public InvestmentPercents createSmallCapPercent(InvestmentPercents smallCapPercent) {
+    public Percents createSmallCapPercent(Percents smallCapPercent) {
 
-        InvestmentPercents newSmallCapPercent = new InvestmentPercents();
+        Percents newSmallCapPercent = new Percents();
 
         return (smallCapPercent);
 
     }
 
 
-    public InvestmentPercents createSpecialtyPercent(InvestmentPercents specialtyPercent) {
+    public Percents createSpecialtyPercent(Percents specialtyPercent) {
 
-        InvestmentPercents newSpecialtyPercent = new InvestmentPercents();
+        Percents newSpecialtyPercent = new Percents();
 
         return (specialtyPercent);
 
     }
 
 
-    public InvestmentPercents createStableValuePercent(InvestmentPercents stableValuePercent) {
+    public Percents createStableValuePercent(Percents stableValuePercent) {
 
-        InvestmentPercents newStableValuePercent = new InvestmentPercents();
+        Percents newStableValuePercent = new Percents();
 
         return (stableValuePercent);
 
     }
 
 
-    public InvestmentPercents createTotalPercent(InvestmentPercents totalPercent) {
+    public Percents createTotalPercent(Percents totalPercent) {
 
-        InvestmentPercents newTotalPercent = new InvestmentPercents();
+        Percents newTotalPercent = new Percents();
 
         return (totalPercent);
 
