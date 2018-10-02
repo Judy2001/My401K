@@ -1,13 +1,11 @@
 package org.launchcode.my401k.models;
 
 
-import org.launchcode.my401k.models.forms.User;
-
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 
-public class Login extends User {
+public class Login {
 
     @NotNull
     @Size(min=3, max=30, message = "Username not in database")
@@ -35,7 +33,6 @@ public class Login extends User {
         return (user);
     }
 
-
     public String getUsername() {
         return username;
     }
@@ -51,4 +48,5 @@ public class Login extends User {
     public void setPassword(String password) {
         this.password = password;
     }
+
 }

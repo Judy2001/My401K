@@ -4,7 +4,7 @@ package org.launchcode.my401k.controllers;
 import org.launchcode.my401k.models.Login;
 import org.launchcode.my401k.models.Signup;
 import org.launchcode.my401k.models.data.UserDao;
-import org.launchcode.my401k.models.forms.User;
+import org.launchcode.my401k.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,7 +12,6 @@ import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.validation.Valid;
 
@@ -72,11 +71,13 @@ public class UserController {
 
         if (errors.hasErrors()) {
             model.addAttribute("title", "My 401k");
-            //model.addAttribute("userId", userDao.findAll());
-            User user = newLogin.loginUser();
-            userDao.save(user);
+
             return "user/login";
         }
+
+        User user = newLogin.loginUser();
+        userDao.save(user);
+
 
         return "redirect:/investment_choices/display_form";
     }

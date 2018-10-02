@@ -1,28 +1,12 @@
-/*
-package org.launchcode.my401k.models;
+package org.launchcode.my401k.models.forms;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-import java.util.ArrayList;
 
-@Entity
-public class UserChoices {
 
-    @Id
-    @GeneratedValue
-    private int choicesId;
-
-    @Id
-    private int userId;
-
-    @ManyToMany
-    private ArrayList userChoices;
+public class InvestmentPercents {
 
     private int assetAllocationPercent;
     private int bondsPercent;
-    private int globalPerecent;
+    private int globalPercent;
     private int largeCapPercent;
     private int midCapPercent;
     private int smallCapPercent;
@@ -31,16 +15,14 @@ public class UserChoices {
     private int totalPercent;
 
 
-    public UserChoices (ArrayList userChoices, int assetAllocationPercent,
-                        int bondsPercent,  int globalPerecent, int largeCapPercent,
+    public InvestmentPercents (int bondsPercent, int globalPercent, int largeCapPercent,
                         int midCapPercent, int smallCapPercent,
                         int specialtyPercent, int stableValuePercent,
                         int totalPercent) {
 
-        this.userChoices = userChoices;
         this.assetAllocationPercent = assetAllocationPercent;
         this.bondsPercent = bondsPercent;
-        this.globalPerecent = globalPerecent;
+        this.globalPercent = globalPercent;
         this.largeCapPercent = largeCapPercent;
         this.midCapPercent = midCapPercent;
         this.smallCapPercent = smallCapPercent;
@@ -51,27 +33,90 @@ public class UserChoices {
     }
 
 
-    public UserChoices() { }
+    public InvestmentPercents() { }
 
 
-    public void setUserChoices(UserChoices userChoices) { }
+    public InvestmentPercents createAssetAllocationPercent(InvestmentPercents assetAllocationPercent) {
+
+            InvestmentPercents newAssetAllocationPercent = new InvestmentPercents();
+
+            return (assetAllocationPercent);
+
+        }
 
 
-    public int getChoicesId() {
-        return choicesId;
+    public InvestmentPercents createBondsPercent(InvestmentPercents bondsPercent) {
+
+        InvestmentPercents newBondsPercent = new InvestmentPercents();
+
+        return (bondsPercent);
+
     }
 
-    public int getUserId() {
-        return userId;
+
+    public InvestmentPercents createGlobalPercent(InvestmentPercents globalPercent) {
+
+        InvestmentPercents newGlobalPercent = new InvestmentPercents();
+
+        return (globalPercent);
+
     }
 
-    public ArrayList getUserChoices() {
-        return userChoices;
+
+    public InvestmentPercents createLargeCapPercent(InvestmentPercents largeCapPercent) {
+
+        InvestmentPercents newLargeCapPercent = new InvestmentPercents();
+
+        return (largeCapPercent);
+
     }
 
-    public void setUserChoices(ArrayList userChoices) {
-        this.userChoices = userChoices;
+
+    public InvestmentPercents createMidCapPercent(InvestmentPercents midCapPercent) {
+
+        InvestmentPercents newMidCapPercent = new InvestmentPercents();
+
+        return (midCapPercent);
+
     }
+
+
+    public InvestmentPercents createSmallCapPercent(InvestmentPercents smallCapPercent) {
+
+        InvestmentPercents newSmallCapPercent = new InvestmentPercents();
+
+        return (smallCapPercent);
+
+    }
+
+
+    public InvestmentPercents createSpecialtyPercent(InvestmentPercents specialtyPercent) {
+
+        InvestmentPercents newSpecialtyPercent = new InvestmentPercents();
+
+        return (specialtyPercent);
+
+    }
+
+
+    public InvestmentPercents createStableValuePercent(InvestmentPercents stableValuePercent) {
+
+        InvestmentPercents newStableValuePercent = new InvestmentPercents();
+
+        return (stableValuePercent);
+
+    }
+
+
+    public InvestmentPercents createTotalPercent(InvestmentPercents totalPercent) {
+
+        InvestmentPercents newTotalPercent = new InvestmentPercents();
+
+        return (totalPercent);
+
+    }
+
+
 
     public int getAssetAllocationPercent() {
         return assetAllocationPercent;
@@ -89,12 +134,12 @@ public class UserChoices {
         this.bondsPercent = bondsPercent;
     }
 
-    public int getGlobalPerecent() {
-        return globalPerecent;
+    public int getGlobalPercent() {
+        return globalPercent;
     }
 
-    public void setGlobalPerecent(int globalPerecent) {
-        this.globalPerecent = globalPerecent;
+    public void setGlobalPercent(int globalPercent) {
+        this.globalPercent = globalPercent;
     }
 
     public int getLargeCapPercent() {
@@ -146,4 +191,3 @@ public class UserChoices {
     }
 
 }
-*/

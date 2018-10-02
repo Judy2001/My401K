@@ -1,7 +1,5 @@
 package org.launchcode.my401k.models;
 
-import org.launchcode.my401k.models.forms.User;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -34,9 +32,6 @@ public class Signup {
     public Signup() { }
 
 
-    public void setSignup(Signup newSignup) {
-    }
-
     public User createUser(){
         User newUser = new User();
         newUser.setUsername(this.username);
@@ -44,6 +39,7 @@ public class Signup {
 
         return (newUser);
     }
+
 
     public String getUsername() {
         return username;

@@ -1,9 +1,15 @@
-/*
 package org.launchcode.my401k.models.data;
 
-import org.launchcode.my401k.models.UserChoices;
-import org.springframework.data.repository.CrudRepository;
 
-public interface UserChoicesDao extends CrudRepository<UserChoices, Integer> {
+import org.launchcode.my401k.models.forms.UserChoices;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.HashMap;
+
+
+@Repository
+@Transactional
+public interface UserChoicesDao extends CrudRepository<UserChoices, HashMap> {
 }
-*/
