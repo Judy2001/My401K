@@ -15,10 +15,10 @@ public class InvestmentPercents {
     private int totalPercent;
 
 
-    public InvestmentPercents (int bondsPercent, int globalPercent, int largeCapPercent,
-                        int midCapPercent, int smallCapPercent,
-                        int specialtyPercent, int stableValuePercent,
-                        int totalPercent) {
+    public InvestmentPercents (int assetAllocationPercent, int bondsPercent,
+                               int globalPercent, int largeCapPercent, int midCapPercent,
+                               int smallCapPercent, int specialtyPercent,
+                               int stableValuePercent, int totalPercent) {
 
         this.assetAllocationPercent = assetAllocationPercent;
         this.bondsPercent = bondsPercent;
