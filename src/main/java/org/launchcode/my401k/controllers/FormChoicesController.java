@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 @Controller
 @RequestMapping(value = "investment_choices")
-public class InvestmentChoicesController {
+public class FormChoicesController {
 
     static ArrayList<String> assetAllocation = new ArrayList<>();
     static ArrayList<String> bonds = new ArrayList<>();
