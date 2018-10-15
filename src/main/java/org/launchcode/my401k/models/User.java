@@ -1,10 +1,9 @@
 package org.launchcode.my401k.models;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
-import java.util.HashMap;
-import java.util.Map;
-
 
 @Entity
 public class User {
@@ -19,12 +18,8 @@ public class User {
     @NotNull
     private String password;
 
-    @OneToMany
-    @JoinColumn(name = "userChoices_id")
-    private Map<String, Integer> userChoices = new HashMap<>();
 
-
-    public User(int userId, String username, String password) {
+    public User(int id, String username, String password) {
         this.id = id;
         this.username = username;
         this.password = password;
@@ -38,7 +33,7 @@ public class User {
     }
 
 
-    public int getUserId() {
+    public int getId() {
         return id;
     }
 

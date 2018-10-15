@@ -1,13 +1,13 @@
 package org.launchcode.my401k.models;
 
+
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 
 public class Signup {
-
-    private int userId;
 
     @NotNull
     @Size(min=3, max=30, message = "Username must be 3-20 characters long")
@@ -30,6 +30,10 @@ public class Signup {
     }
 
     public Signup() { }
+
+
+    public void setSignup(Signup newSignup) {
+    }
 
 
     public User createUser(){

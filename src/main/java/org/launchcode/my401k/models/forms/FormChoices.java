@@ -3,7 +3,7 @@ package org.launchcode.my401k.models.forms;
 import java.util.ArrayList;
 
 
-public class InvestmentChoices {
+public class FormChoices {
 
     private ArrayList assetAllocation;
     private ArrayList bonds;
@@ -15,9 +15,9 @@ public class InvestmentChoices {
     private ArrayList stableValue;
 
 
-    public InvestmentChoices(ArrayList assetAllocation, ArrayList bonds, ArrayList global,
-                             ArrayList largeCap, ArrayList midCap, ArrayList smallCap,
-                             ArrayList specialty, ArrayList stableValue) {
+    public FormChoices(ArrayList assetAllocation, ArrayList bonds, ArrayList global,
+                       ArrayList largeCap, ArrayList midCap, ArrayList smallCap,
+                       ArrayList specialty, ArrayList stableValue) {
 
         this.assetAllocation = assetAllocation;
         this.bonds = bonds;
@@ -30,7 +30,7 @@ public class InvestmentChoices {
     }
 
 
-    public InvestmentChoices() {
+    public FormChoices() {
     }
 
 
@@ -98,17 +98,17 @@ public class InvestmentChoices {
         this.stableValue = stableValue;
     }
 
-    public InvestmentChoices createInvestmentChoices() {
+    public FormChoices createInvestmentChoices() {
 
-        InvestmentChoices investmentChoices = new InvestmentChoices();
-        investmentChoices.setAssetAllocation(this.assetAllocation);
-        investmentChoices.setBonds(this.bonds);
-        investmentChoices.setGlobal(this.global);
-        investmentChoices.setLargeCap(this.largeCap);
-        investmentChoices.setMidCap(this.midCap);
-        investmentChoices.setSmallCap(this.smallCap);
-        investmentChoices.setSpecialty(this.specialty);
-        investmentChoices.setStableValue(this.stableValue);
+        FormChoices formChoices = new FormChoices();
+        formChoices.setAssetAllocation(this.assetAllocation);
+        formChoices.setBonds(this.bonds);
+        formChoices.setGlobal(this.global);
+        formChoices.setLargeCap(this.largeCap);
+        formChoices.setMidCap(this.midCap);
+        formChoices.setSmallCap(this.smallCap);
+        formChoices.setSpecialty(this.specialty);
+        formChoices.setStableValue(this.stableValue);
 
 
         assetAllocation.add("VanTargetRetirement2020Inv");
@@ -147,7 +147,7 @@ public class InvestmentChoices {
 
         stableValue.add("FedCapitalPreservation");
 
-        return (investmentChoices);
+        return (formChoices);
     }
 
 }

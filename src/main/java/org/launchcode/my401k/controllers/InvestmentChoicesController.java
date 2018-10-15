@@ -21,7 +21,6 @@ public class InvestmentChoicesController {
     static ArrayList<String> smallCap = new ArrayList<>();
     static ArrayList<String> specialty = new ArrayList<>();
     static ArrayList<String> stableValue = new ArrayList<>();
-    static ArrayList<String> investmentChoices = new ArrayList<>();
 
 
     @RequestMapping(value = "display_form", method = RequestMethod.GET)
@@ -36,7 +35,6 @@ public class InvestmentChoicesController {
         model.addAttribute("smallCap", smallCap);
         model.addAttribute("specialty", specialty);
         model.addAttribute("stableValue", stableValue);
-
 
         return "investment_choices/display_form";
 
@@ -53,6 +51,16 @@ public class InvestmentChoicesController {
                                                @RequestParam ArrayList<String> specialty,
                                                @RequestParam ArrayList<String> stableValue,
                                                Model model) {
+
+        model.addAttribute("title", "My 401k");
+        model.addAttribute("assetAllocation", assetAllocation);
+        model.addAttribute("bonds", bonds);
+        model.addAttribute("global", global);
+        model.addAttribute("largeCap", largeCap);
+        model.addAttribute("midCap", midCap);
+        model.addAttribute("smallCap", smallCap);
+        model.addAttribute("specialty", specialty);
+        model.addAttribute("stableValue", stableValue);
 
         return "investment_choices/process_form";
 

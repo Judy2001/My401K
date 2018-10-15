@@ -1,8 +1,19 @@
-package org.launchcode.my401k.models.forms;
+/*
+package org.launchcode.my401k.models;
+
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 
 
+@Entity
 public class Percents {
+
+    @Id
+    @GeneratedValue
+    private int id;
 
     private int assetAllocationPercent;
     private int bondsPercent;
@@ -13,6 +24,8 @@ public class Percents {
     private int specialtyPercent;
     private int stableValuePercent;
     private int totalPercent;
+
+
 
 
     public Percents(int assetAllocationPercent, int bondsPercent,
@@ -110,12 +123,41 @@ public class Percents {
 
     public Percents createTotalPercent(Percents totalPercent) {
 
-        Percents newTotalPercent = new Percents();
+        Percents totalPercent = new Percents();
 
         return (totalPercent);
 
     }
 
+
+
+    public Percents getTotalPercent() {
+        Percents assetAllocationPercent = new Percents();
+        Percents bondsPercent = new Percents();
+        Percents globalPercent = new Percents();
+        Percents largeCapPercent = new Percents();
+        Percents midCapPercent = new Percents();
+        Percents smallCapPercent = new Percents();
+        Percents specialtyPercent = new Percents();
+        Percents stableValuePercent = new Percents();
+        Percents totalPercent = new Percents();
+
+        assetAllocationPercent == 0;
+        private int bondsPercent;
+        private int globalPercent;
+        private int largeCapPercent;
+        private int midCapPercent;
+        private int smallCapPercent;
+        private int specialtyPercent;
+        private int stableValuePercent;
+        private int totalPercent;
+
+        totalPercent == assetAllocationPercent + bondsPercent + globalPercent + largeCapPercent + midCapPercent + smallCapPercent
+   + specialtyPercent + stableValuePercent;
+
+        if totalPercent != 100;
+            return
+    }
 
 
     public int getAssetAllocationPercent() {
@@ -190,4 +232,7 @@ public class Percents {
         this.totalPercent = totalPercent;
     }
 
+
+
 }
+*/
