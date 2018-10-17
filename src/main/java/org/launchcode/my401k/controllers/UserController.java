@@ -35,7 +35,7 @@ public class UserController {
     public String displaySignupForm(Model model) {
 
         model.addAttribute("title", "My 401k");
-        //model.addAttribute("userId", userDao.findAll());
+        model.addAttribute("id", userDao.findAll());
         model.addAttribute(new Signup());
 
         return "user/signup";
@@ -52,8 +52,8 @@ public class UserController {
 
         User newUser = newSignup.createUser();
         userDao.save(newUser);
-        //return "redirect:/investment_choices/display_form";
-        return "user/signup";
+
+        return "redirect:/investment_choices/display_form";
 
     }
 
@@ -61,7 +61,7 @@ public class UserController {
     @RequestMapping(value = "login", method = RequestMethod.GET)
     public String displayLoginForm(Model model) {
         model.addAttribute("title", "My 401k");
-        //model.addAttribute("userId", userDao.findAll());
+        model.addAttribute("id", userDao.findAll());
         model.addAttribute(new Login());
         return "user/login";
     }
@@ -79,9 +79,7 @@ public class UserController {
             return "user/login";
         }
 
-        return "user/login";
-
-        //return "redirect:/investment_choices/display_form";
+        return "redirect:/investment_choices/display_form";
     }
 
 }
