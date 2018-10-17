@@ -13,7 +13,7 @@
             <label th:for="${investment_choices}"><h3>Asset Allocation:</h3></label>
             <tr>
                 <th:block th:each="item : ${assetAllocation}">
-                    <td><input type="checkbox" th:field="*{assetAllocation}">*{assetAllocation}</td>
+                    <td><input type="checkbox" th:field="*{assetAllocation}" />*{assetAllocation}</td>
                     <td><input class="form-control" th:field="*{percent}" />%</td>
                     <td></td>
                 </th:block>
@@ -24,7 +24,7 @@
             <label th:for="investment-choices"><h3>Bonds:</h3></label>
             <tr>
                 <th:block th:each="item : ${bonds}">
-                    <td><input type="checkbox" th:field="*{bonds}">*{bonds}</td>
+                    <td><input type="checkbox" th:field="*{bonds}" />*{bonds}</td>
                     <td><input class="form-control" th:field="*{percent}" />%</td>
                 </th:block>
             </tr>
@@ -34,7 +34,7 @@
             <label th:for="investment-choices"><h3>Global:</h3></label>
             <tr>
                 <th:block th:each="item : ${global}">
-                    <td><input type="checkbox" th:field="*{global}">*{global}</td>
+                    <td><input type="checkbox" th:field="*{global}" />*{global}</td>
                     <td><input class="form-control" th:field="*{percent}" />%</td>
                 </th:block>
             </tr>
@@ -44,7 +44,7 @@
             <label th:for="investment-choices"><h3>Large Cap:</h3></label>
             <tr>
                 <th:block th:each="item : ${largeCap}">
-                    <td><input type="checkbox" th:field="*{largeCap}">*{largeCap}</td>
+                    <td><input type="checkbox" th:field="*{largeCap}" /> /*{largeCap}</td>
                     <td><input class="form-control" th:field="*{percent}" />%</td>
                 </th:block>
             </tr>
@@ -54,7 +54,7 @@
             <label th:for="investment-choices"><h3>Mid Cap:</h3></label>
             <tr>
                 <th:block th:each="item : ${midCap}">
-                    <td><input type="checkbox" th:field="*{midCap}">*{midCap}</td>
+                    <td><input type="checkbox" th:field="*{midCap}" />*{midCap}</td>
                     <td><input class="form-control" th:field="*{percent}" />%</td>
                 </th:block>
             </tr>
@@ -64,7 +64,7 @@
             <label th:for="investment-choices"><h3>Small Cap:</h3></label>
             <tr>
                 <th:block th:each="item : ${smallCap}">
-                    <td><input type="checkbox" th:field="*{smallCap}">*{smallCap}</td>
+                    <td><input type="checkbox" th:field="*{smallCap}" />*{smallCap}</td>
                     <td><input class="form-control" th:field="*{percent}" />%</td>
                 </th:block>
             </tr>
@@ -74,7 +74,7 @@
             <label th:for="investment-choices"><h3>Specialty:</h3></label>
             <tr>
                 <th:block th:each="item : ${specialty}">
-                    <td><input type="checkbox" th:field="*{specialty}">*{specialty}</td>
+                    <td><input type="checkbox" th:field="*{specialty}" />*{specialty}</td>
                     <td><input class="form-control" th:field="*{percent}" />%</td>
                 </th:block>
             </tr>
@@ -84,7 +84,7 @@
             <label th:for="investment-choices"><h3>Stable Value:</h3></label>
             <tr>
                 <th:block th:each="item : ${stableValue}">
-                    <td><input type="checkbox" th:field="*{stableValue}">*{stableValue}</td>
+                    <td><input type="checkbox" th:field="*{stableValue}" />*{stableValue}</td>
                     <td><input class="form-control" th:field="*{percent}" />%</td>
                 </th:block>
             </tr>
