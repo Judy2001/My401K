@@ -2,47 +2,37 @@ package org.launchcode.my401k.models;
 
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-
 
 
 @Entity
 public class FundCategory {
 
     @Id
-    @GeneratedValue
     private int id;
 
-    private String name;
+    private String type;
 
 
-    public FundCategory(int id, String name) {
+    public FundCategory(Integer id, String type) {
         this.id = id;
-        this.name = name;
+        this.type = type;
     }
-
 
 
     public FundCategory() { }
-
-
-
-    public void setFundCategory(FundCategory newFundCategory) {
-    }
-
 
 
     public int getId() {
         return id;
     }
 
-    public String getName() {
-        return name;
+    public String getType() {
+        return type;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setType(String name) {
+        this.type = type;
     }
 
 }

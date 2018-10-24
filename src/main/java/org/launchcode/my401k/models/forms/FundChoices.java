@@ -3,7 +3,7 @@ package org.launchcode.my401k.models.forms;
 import java.util.ArrayList;
 
 
-public class FormChoices {
+public class FundChoices {
 
     private ArrayList assetAllocation;
     private ArrayList bonds;
@@ -15,7 +15,7 @@ public class FormChoices {
     private ArrayList stableValue;
 
 
-    public FormChoices(ArrayList assetAllocation, ArrayList bonds, ArrayList global,
+    public FundChoices(ArrayList assetAllocation, ArrayList bonds, ArrayList global,
                        ArrayList largeCap, ArrayList midCap, ArrayList smallCap,
                        ArrayList specialty, ArrayList stableValue) {
 
@@ -30,7 +30,7 @@ public class FormChoices {
     }
 
 
-    public FormChoices() {
+    public FundChoices() {
     }
 
 
@@ -98,9 +98,9 @@ public class FormChoices {
         this.stableValue = stableValue;
     }
 
-    public FormChoices createInvestmentChoices() {
+    public FundChoices createInvestmentChoices() {
 
-        FormChoices formChoices = new FormChoices();
+        FundChoices formChoices = new FundChoices();
         formChoices.setAssetAllocation(this.assetAllocation);
         formChoices.setBonds(this.bonds);
         formChoices.setGlobal(this.global);

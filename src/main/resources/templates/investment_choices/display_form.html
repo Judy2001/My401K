@@ -44,7 +44,7 @@
             <label th:for="investment-choices"><h3>Large Cap:</h3></label>
             <tr>
                 <th:block th:each="item : ${largeCap}">
-                    <td><input type="checkbox" th:field="*{largeCap}" /> /*{largeCap}</td>
+                    <td><input type="checkbox" th:field="*{largeCap}" /> *{largeCap}</td>
                     <td><input class="form-control" th:field="*{percent}" />%</td>
                 </th:block>
             </tr>

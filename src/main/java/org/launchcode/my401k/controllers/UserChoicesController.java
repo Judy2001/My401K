@@ -1,5 +1,7 @@
 package org.launchcode.my401k.controllers;
 
+import org.launchcode.my401k.models.FundCategory;
+import org.launchcode.my401k.models.data.FundCategoryDao;
 import org.launchcode.my401k.models.data.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,6 +22,9 @@ public class UserChoicesController {
     public String displayInvestmentChoicesForm(Model model) {
 
         model.addAttribute("title", "My 401k");
+
+        FundCategory name = new FundCategory();
+        //FundCategoryDao.save(name);
 
         return "investment_choices/display_form";
     }

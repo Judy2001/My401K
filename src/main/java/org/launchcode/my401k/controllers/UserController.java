@@ -72,14 +72,19 @@ public class UserController {
 
         if (errors.hasErrors()) {
             model.addAttribute("title", "My 401k");
-
-            User user = newLogin.loginUser();
-            userDao.save(user);
-
             return "user/login";
         }
 
+
+
         return "redirect:/investment_choices/display_form";
     }
+
+
+/*    @RequestMapping(value= "logout", method = RequestMethod.POST)
+    public String logout() {
+        session.removeAttribute("username");
+        session.invalidate();
+    }*/
 
 }
